@@ -18,12 +18,3 @@ RUN yarn run build
 EXPOSE 3000
 
 CMD ["yarn", "run", "start"]
-
-# 1) Build the image
-# docker build -t api-rocket .
-
-# 2) List the created image
-# docker image ls api-rocket
-
-# 3) Check the image history
-# docker image history api-rocket
