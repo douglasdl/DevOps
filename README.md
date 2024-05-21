@@ -195,3 +195,5 @@ docker run -v <volume-name>:/usr/src/app --network=<network-id> -p 3000:3000 -d 
 docker run -v primeiro-volume:/usr/src/app --network my-network -p 3000:3000 -d api-rocket:v1
 ```
 
+7) Persisting data in the volumes:
+
