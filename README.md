@@ -90,6 +90,11 @@ docker run --rm -p 3000:3000 api-rocket
 ```sh
 docker run -p 3000:3000 -d api-rocket
 ```
+4) Run the container:
+(Add tag after the container name)
+```sh
+docker run -p 3000:3000 -d api-rocket:v1
+```
 
 5) List the running containers:
 ```sh
@@ -105,8 +110,35 @@ docker stop <id-hash>
 ```sh
 docker start <id-hash>
 ```
-
+ 
 8) See the logs from a background running container: 
 ```sh
 docker logs <id-hash>
 ```
+
+### Network
+
+## Commands
+
+1) List avaimable commands:
+```sh
+docker network
+```
+
+2) List networks:
+```sh
+docker network ls
+```
+
+3) Create a network:
+```sh
+docker network create <network-name>
+```
+
+4) Connect a container to a network:
+```sh
+docker network connect <network-id> <container-id>
+# or
+docker network connect <network-name> <container-name>
+```
+5) 
