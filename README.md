@@ -59,3 +59,54 @@ Focus on Implementation:
 ## 
 
 - [Docker Hub](https://hub.docker.com/)
+
+
+
+## Commands
+
+1) Build the image:
+```sh
+docker build -t api-rocket .
+```
+
+2) List the created image:
+```sh
+docker image ls api-rocket
+```
+
+3) Check the image history:
+```sh
+docker image history api-rocket
+```
+
+4) Run the container:
+  (--rm delete the container on stop)
+  (-p port numbers docker:application)
+```sh
+docker run --rm -p 3000:3000 api-rocket
+```
+4) Run the container:
+  (-d detach the container to run in background)
+```sh
+docker run -p 3000:3000 -d api-rocket
+```
+
+5) List the running containers:
+```sh
+docker ps
+```
+
+6) Stop a running container by its ID:
+```sh
+docker stop <id-hash>
+```
+
+7) Start a container by its ID:
+```sh
+docker start <id-hash>
+```
+
+8) See the logs from a background running container: 
+```sh
+docker logs <id-hash>
+```
