@@ -116,11 +116,18 @@ docker start <id-hash>
 docker logs <id-hash>
 ```
 
+9) Display detailed information on one or more container:
+```sh
+docker network inspect <container-id>
+# or
+docker network inspect <container-name>
+```
+
 ### Network
 
 ## Commands
 
-1) List avaimable commands:
+1) List available commands:
 ```sh
 docker network
 ```
@@ -141,4 +148,50 @@ docker network connect <network-id> <container-id>
 # or
 docker network connect <network-name> <container-name>
 ```
-5) 
+5) Display detailed information on one or more networks:
+```sh
+docker network inspect <network-id>
+# or
+docker network inspect <network-name>
+```
+
+6) Run the container specifying the network:
+```sh
+docker run --network=<network-id> -p 3000:3000 -d api-rocket:v1
+```
+
+### Volumes
+
+## Commands
+
+1) Open the virtual directory:
+```sh
+docker exec -it <container-id> bash
+```
+
+2) Close the virtual directory:
+```sh
+exit
+```
+
+3) List available commands:
+```sh
+docker volume
+```
+
+4) Create a volume:
+```sh
+docker volume create <volume-name>
+```
+
+5) Display detailed information on one or more volumes:
+```sh
+docker volume inspect <volume-name>
+```
+
+6) Run the container specifying the volume:
+```sh
+docker run -v <volume-name>:/usr/src/app --network=<network-id> -p 3000:3000 -d api-rocket:v1
+docker run -v primeiro-volume:/usr/src/app --network my-network -p 3000:3000 -d api-rocket:v1
+```
+
