@@ -205,3 +205,25 @@ tag: 18-alpine3.19
 
 
 ### Multiple Stages Containers
+
+### Multiple Containers
+
+-Using database
+```sh
+docker pull mysql:8
+docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=rocketseat-db -e MYSQL_USER=admin -e MYSQL_PASSWORD=root --name mysql mysql:8 
+```
+
+- Need to connet both in the same network.
+
+## Docker Compose
+
+Check installed version:
+```sh
+docker-compose -v
+```
+
+Run the "docker-compose.yaml":
+```sh
+docker-compose up
+```
