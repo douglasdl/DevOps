@@ -167,6 +167,8 @@ docker run --network=<network-id> -p 3000:3000 -d api-rocket:v1
 1) Open the virtual directory:
 ```sh
 docker exec -it <container-id> bash
+#or
+docker exec -it <container-id> sh
 ```
 
 2) Close the virtual directory:
@@ -197,3 +199,9 @@ docker run -v primeiro-volume:/usr/src/app --network my-network -p 3000:3000 -d 
 
 7) Persisting data in the volumes:
 
+### Alpine
+
+tag: 18-alpine3.19
+
+
+### Multiple Stages Containers
