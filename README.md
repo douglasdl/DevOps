@@ -56,13 +56,11 @@ Focus on Implementation:
      - Locals and Globals features
      
 
-## 
+## First Steps with Docker
 
 - [Docker Hub](https://hub.docker.com/)
 
-
-
-## Commands
+### Commands
 
 1) Build the image:
 ```sh
@@ -125,7 +123,7 @@ docker network inspect <container-name>
 
 ### Network
 
-## Commands
+#### Commands
 
 1) List available commands:
 ```sh
@@ -162,7 +160,7 @@ docker run --network=<network-id> -p 3000:3000 -d api-rocket:v1
 
 ### Volumes
 
-## Commands
+#### Commands
 
 1) Open the virtual directory:
 ```sh
@@ -216,14 +214,63 @@ docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=rockets
 
 - Need to connet both in the same network.
 
-## Docker Compose
+### Docker Compose
 
-Check installed version:
+0) Check installed version:
 ```sh
 docker-compose -v
 ```
 
-Run the "docker-compose.yaml":
+1) Run the "docker-compose.yaml":
 ```sh
 docker-compose up
 ```
+
+1) Run the "docker-compose.yaml":
+  (-d detach the container to run in background)
+```sh
+docker-compose up -d
+```
+
+2) Check the logs:
+```sh
+docker-compose logs
+```
+
+1) Build the image:
+```sh
+docker-compose build
+```
+
+1) Build the image and run the container:
+```sh
+docker-compose up --build -d
+```
+
+2) Stop the containers:
+```sh
+docker-compose down
+```
+
+## IAC - Infra as Code
+
+- AWS, GCP, etc.
+- All resources declaration by code.
+- Makes an easy maintenance in all the infrastructure.
+- Automation of all creation flow, resource edition and remotion.
+- Brings visibility about what is being used.
+
+### GitOps (Git + Operational)
+
+- Embed SCM flows in the operational context.
+- Avoid the "Only in console modifications".
+- Ensures an unique truth source.
+- Version control in all the flow.
+
+### Overview
+
+### AWS and CloudFormation
+
+### Pulumi
+
+### Terraform - CDK and HCL
