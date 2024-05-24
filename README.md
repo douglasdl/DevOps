@@ -289,7 +289,7 @@ docker-compose down
  - Need to be executed in the correct order
  - In some cases it is possible to keep thehistory of what was done
 
-### AWS and [CloudFormation] (https://aws.amazon.com/cloudformation/)
+### AWS and [CloudFormation](https://aws.amazon.com/cloudformation/)
 
 Clould Functions to Manage Stack (Declarative Model) 
 - CloudFormation (AWS)
@@ -299,6 +299,9 @@ Clould Functions to Manage Stack (Declarative Model)
 - CDK - Cloud Development Kit (TypeScript)
 
 
-### [Pulumi] (https://www.pulumi.com/)
+### [Pulumi](https://www.pulumi.com/)
 
-### Terraform - CDK and HCL
+### [Terraform](https://www.terraform.io/) - CDK and HCL
+
+- [Registry](https://registry.terraform.io/?product_intent=terraform)
+- HCL: HashiCorp Configuration Language
