@@ -269,6 +269,26 @@ docker-compose down
 
 ### Overview
 
+-Developers -> write -> Infrastructure Code 
+   -> Version Control
+   <-> Push or Pull <-> Automation API or Server
+        Manage -> Infrastructure in the Cloud
+        Manage -> Infrastructure on Premises
+
+- Declarative vs Imperative
+
+ #### Declarative Model (What to Do)
+
+ - Define the desired state
+ - Consider all the flow resources
+ - Keep history and past states
+ - Easy to do future deletions
+
+### Imperative Nodel (How to Do)
+ - Define the commands to create the resource
+ - Need to be executed in the correct order
+ - In some cases it is possible to keep thehistory of what was done
+
 ### AWS and CloudFormation
 
 ### Pulumi
