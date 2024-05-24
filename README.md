@@ -289,8 +289,16 @@ docker-compose down
  - Need to be executed in the correct order
  - In some cases it is possible to keep thehistory of what was done
 
-### AWS and CloudFormation
+### AWS and [CloudFormation] (https://aws.amazon.com/cloudformation/)
 
-### Pulumi
+Clould Functions to Manage Stack (Declarative Model) 
+- CloudFormation (AWS)
+- Deployment Manage (GCP)
+- Resource Manage (Azure)
+
+- CDK - Cloud Development Kit (TypeScript)
+
+
+### [Pulumi] (https://www.pulumi.com/)
 
 ### Terraform - CDK and HCL
