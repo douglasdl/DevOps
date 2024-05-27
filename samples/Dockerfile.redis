@@ -1,0 +1,12 @@
+FROM redis:alpine3.19
+
+WORKDIR /data
+
+COPY /scripts ./scripts
+
+# Copy the Redis configuration
+COPY redis.conf /usr/local/etc/redis/redis.conf
+
+EXPOSE 6379
+
+CMD ["sh", "/data/scripts/startup.sh"]
