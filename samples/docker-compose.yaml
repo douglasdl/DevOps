@@ -1,0 +1,60 @@
+version: '3.7'
+
+services:
+  redis:
+    image: redis:alpine3.19
+    restart: always
+    container_name: redis
+    # command: redis-server --appendonly yes
+    volumes:
+      - /path/to/local/dаta:/root/redis
+      - /path/to/local/redis.conf:/usr/local/etc/redis/redis.conf
+    ports:
+      - 6379:6379
+    environment:
+      - REDIS_PORT=6379
+      - REDIS_HOST=redis
+      - REDIS_PASSWORD=123
+      - USERNAME=user
+      - REDIS_DATABASES=16
+    networks:
+      - my-network
+
+
+  mysql:
+    image: mysql:8
+    container_name: mysql
+    volumes:
+      - db:/var/lib/mysql
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=rocketseat-db
+      - MYSQL_USER=admin
+      - MYSQL_PASSWORD=root
+    networks:
+      - my-network
+
+  web-vite:
+    build:
+      context: .
+    container_name: web-vite
+    ports:
+      - 4173:4173
+    depends_on:
+      - mysql
+      # - redis
+    environment:
+      - REDIS_HOST=redis
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    name: my-network
+    external: true
+    driver: bridge
+
+volumes:
+  db:
